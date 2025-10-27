@@ -69,4 +69,5 @@ jobs:
 
       # deploy image
       - name: Deploy Docker image
+      # wacicd é o nome do serviço na GCP
         run: gcloud run deploy wacicd --image $IMAGE_NAME --region us-west1 --memory 128Mi --min-instances 0 --max-instances 1 --platform managed --port 8080 --allow-unauthenticated
